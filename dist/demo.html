@@ -1,0 +1,19 @@
+<meta charset="utf-8">
+<title>chatBox demo</title>
+<script src="https://unpkg.com/vue"></script>
+<script src="./chatBox.umd.js"></script>
+
+<link rel="stylesheet" href="./chatBox.css">
+
+
+<div id="app">
+  <demo></demo>
+</div>
+
+<script>
+new Vue({
+  components: {
+    demo: chatBox
+  }
+}).$mount('#app')
+</script>
