@@ -1,15 +1,19 @@
 <template>
   <div id="app">
-    <xf-chat-box />
+    <xf-chat-box :users="users" />
   </div>
 </template>
 
 <script>
-
+import users from '@/assets/users.js'
 
 export default {
   name: 'app',
-
+  data(){
+    return{
+       users: users,
+    }
+  }
 }
 </script>
 

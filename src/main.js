@@ -1,5 +1,12 @@
 import Vue from 'vue'
-import wrap from '@vue/web-component-wrapper';
-import XfChatBox from './components/XfChatBox';
-const ChatBox = wrap(Vue, XfChatBox);
-window.customElements.define('chat-box', ChatBox);
+import App from './App.vue'
+import XfChatBox from './components/index.js'
+
+Vue.use(XfChatBox)
+// Vue.component('xf-chat-box',  XfChatBox )
+
+Vue.config.productionTip = false
+
+new Vue({
+  render: h => h(App),
+}).$mount('#app')
